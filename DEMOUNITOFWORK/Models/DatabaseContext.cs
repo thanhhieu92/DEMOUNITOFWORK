@@ -9,7 +9,7 @@ namespace DEMOUNITOFWORK.Models
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Product>().HasKey(p => p.Id);
-            modelBuilder.Entity<Order>().HasKey(p => p.Id);
+            modelBuilder.Entity<Order>().HasKey(o => o.Id);
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
